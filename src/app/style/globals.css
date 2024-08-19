@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+span,
+img {
+  display: block;
+}
+
+/* custome paginate from Swipper */
+.swiper-button-prev {
+  background-color: rgba(186, 186, 186, 1) !important;
+  left: 0 !important;
+  opacity: 1 !important;
+  color: rgba(255, 255, 255, 1) !important;
+  width: 30px !important;
+  height: 107px !important;
+  margin-top: 0 !important;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev::after {
+  font-size: 13px !important;
+  font-weight: 700;
+}
+
+.swiper-button-next {
+  background-color: rgba(186, 186, 186, 1) !important;
+  right: 0 !important;
+  color: rgba(255, 255, 255, 1) !important;
+  width: 30px !important;
+  height: 107px !important;
+  margin-top: 0 !important;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after {
+  font-size: 13px !important;
+  font-weight: 700;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  border: 1px solid #000 !important;
+  width: 11px !important;
+  height: 11px !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(95, 95, 95, 1) !important;
+  border: none !important;
+}
+
+@layer components {
+  .flexRow {
+    @apply flex flex-row;
+  }
+
+  .flexRowV1 {
+    @apply flex flex-row justify-between items-center;
+  }
+
+  .flexRowV2 {
+    @apply flex flex-row items-center;
+  }
+
+  .flexRowV3 {
+    @apply flex flex-row justify-between;
+  }
+
+  .flexRowV4 {
+    @apply flex flex-row justify-center;
+  }
+
+  .flexCol {
+    @apply flex flex-col;
+  }
+}
