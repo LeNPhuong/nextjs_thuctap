@@ -1,7 +1,6 @@
 "use client";
 
-import { Ambassadors, BoxOverview, Card, ContainerItems, Slidebar, Title } from "@/app/component";
-import Banner from "@/app/component/other/Banner";
+import { Ambassadors, BoxOverview, Card, ContainerItems, Slidebar, Title, Banner } from "@/app/component";
 import BodyContainer from "@/app/layout/BodyContainer";
 import ContentLayout from "@/app/layout/ContentLayout";
 import ProductLayout from "@/app/layout/ProductLayout";
@@ -22,7 +21,7 @@ const page: NextPage<{}> = () => {
           <ProductLayout>
             <BoxOverview />
             {Array.from({ length: 4 }, (_, e) => (
-              <Card tag="CATEGORY" key={e} />
+              <Card center={true} tag="CATEGORY" key={e} />
             ))}
             <BoxOverview />
           </ProductLayout>
@@ -33,7 +32,7 @@ const page: NextPage<{}> = () => {
           <ProductLayoutV2>
             {Array.from({ length: 8 }, (_, e) => (
               <ContainerItems key={e}>
-                <Card tag="CATEGORY" />
+                <Card center={true} tag="CATEGORY" />
               </ContainerItems>
             ))}
           </ProductLayoutV2>
@@ -46,7 +45,7 @@ const page: NextPage<{}> = () => {
           <ProductLayoutV2>
             {Array.from({ length: 8 }, (_, e) => (
               <ContainerItems key={e}>
-                <Card tag="CATEGORY" />
+                <Card center={true} tag="CATEGORY" />
               </ContainerItems>
             ))}
           </ProductLayoutV2>

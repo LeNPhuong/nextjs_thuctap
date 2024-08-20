@@ -3,10 +3,10 @@ import BtnMore from "./BtnMore";
 
 const Title: React.FC<{
   children: ReactNode;
+  family: String;
   linkRef?: string;
   fontSize?: String;
   fontWeight?: number;
-  family: String;
   marginTop?: String;
   marginRight?: String;
   marginBottom?: String;

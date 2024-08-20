@@ -4,7 +4,7 @@ import BoxMenu from "./MenuList/BoxMenu";
 
 const Header = () => {
   return (
-    <header className="max-h-[143px] shadow-custome1 font-v1">
+    <header className="max-h-[143px] font-v1">
       <div className="w-full h-full">
         <BoxService />
         <BoxMenu />
