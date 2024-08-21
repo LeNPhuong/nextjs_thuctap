@@ -4,9 +4,9 @@ import LabelCard from "./LabelCard";
 import UserCard from "./UserCard";
 import Price from "./Price";
 
-const Card: React.FC<{ tag: string; center: boolean }> = ({ tag, center }) => {
+const Card: React.FC<{ tag: string; center: boolean; width: string }> = ({ tag, center, width }) => {
   return (
-    <BoxItem center={center}>
+    <BoxItem center={center} width={width}>
       <div className="min-h-[250px] w-full bg-rgb-custome-5 relative z-[10]">
         <img
           src="https://is5-ssl.mzstatic.com/image/thumb/Purple111/v4/d5/75/99/d5759986-1f79-9ee2-f092-86f7b74eeee4/source/512x512bb.jpg"

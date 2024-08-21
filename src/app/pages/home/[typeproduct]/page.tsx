@@ -21,7 +21,7 @@ const page: NextPage<{}> = () => {
         <div className="pb-[60px]"></div>
         <ProductLayout>
           {Array.from({ length: 16 }, (_, e) => (
-            <Card center={false} tag="makup" key={e} />
+            <Card width="262px" center={false} tag="makup" key={e} />
           ))}
         </ProductLayout>
         <Pagination page={page} setPage={setPage} lengthPage={4} />

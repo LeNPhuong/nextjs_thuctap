@@ -7,7 +7,6 @@ const LoginService: React.FC<{}> = () => {
   return (
     <div>
       <p className="uppercase text-14 text-center mb-[13px]">or</p>
-
       <Link
         href=""
         className="w-full max-w-[187px] h-[46px] border-[1px] border-rgb-custome-3 pl-[35px] flexRowV2 mx-auto mb-[17px]"

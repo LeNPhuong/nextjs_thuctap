@@ -21,7 +21,7 @@ const page: NextPage<{}> = () => {
           <ProductLayout>
             <BoxOverview />
             {Array.from({ length: 4 }, (_, e) => (
-              <Card center={true} tag="CATEGORY" key={e} />
+              <Card width="262px" center={true} tag="CATEGORY" key={e} />
             ))}
             <BoxOverview />
           </ProductLayout>
@@ -32,7 +32,7 @@ const page: NextPage<{}> = () => {
           <ProductLayoutV2>
             {Array.from({ length: 8 }, (_, e) => (
               <ContainerItems key={e}>
-                <Card center={true} tag="CATEGORY" />
+                <Card width="262px" center={true} tag="CATEGORY" />
               </ContainerItems>
             ))}
           </ProductLayoutV2>
@@ -45,7 +45,7 @@ const page: NextPage<{}> = () => {
           <ProductLayoutV2>
             {Array.from({ length: 8 }, (_, e) => (
               <ContainerItems key={e}>
-                <Card center={true} tag="CATEGORY" />
+                <Card width="262px" center={true} tag="CATEGORY" />
               </ContainerItems>
             ))}
           </ProductLayoutV2>
@@ -60,7 +60,7 @@ const page: NextPage<{}> = () => {
         <ProductLayoutV2>
           {Array.from({ length: 8 }, (_, e) => (
             <ContainerItems key={e}>
-              <Ambassadors />
+              <Ambassadors des={false} onBtn={true} width="262px" center={true} />
             </ContainerItems>
           ))}
         </ProductLayoutV2>

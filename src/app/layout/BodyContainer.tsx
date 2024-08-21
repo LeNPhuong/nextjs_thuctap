@@ -2,11 +2,11 @@
 
 import { ReactNode, FC } from "react";
 
-const BodyContainer: FC<{ children: ReactNode; color: string }> = ({ children, color }) => {
+const BodyContainer: FC<{ children: ReactNode; color?: string }> = ({ children, color }) => {
   return (
     <div
       style={{
-        background: color,
+        background: color ? color : "rgba(247, 247, 247, 1)",
       }}
       className="w-full"
     >
