@@ -13,14 +13,12 @@ const page: NextPage<{}> = () => {
         <Title family="font-v2" fontSize="28" fontWeight={500}>
           CART
         </Title>
-        <div className="pb-[45px]"></div>
-        <div className="flex flex-row w-full justify-between">
+        <div className="flex flex-row w-full justify-between mt-[45px]">
           <div className="w-full max-w-[766px] bg-white p-[30px] flex flex-col gap-[28px]">
             <ItemCart />
             <ItemCart />
             <ItemCart />
             <ItemCart />
-
           </div>
           <BoxPay />
         </div>

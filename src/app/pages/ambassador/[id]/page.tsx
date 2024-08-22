@@ -19,7 +19,6 @@ const page = () => {
           <Card width="25%" center={true} tag="" />
         </ProductLayout>
         <div className="pb-[55px]"></div>
-
       </BodyContainer>
     </>
   );

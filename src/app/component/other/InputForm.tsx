@@ -3,13 +3,14 @@ import React, { SetStateAction } from "react";
 const InputForm: React.FC<{
   initdata?: string | number;
   set?: React.Dispatch<SetStateAction<string | number>>;
+  labelOn?: boolean;
   label?: string;
   mb?: number;
   width?: number;
   height: number;
   gap: number;
   fsz: number;
-}> = ({ initdata, set, label, mb, width, height, gap, fsz }) => {
+}> = ({ initdata, set, label, mb, width, height, gap, fsz, labelOn = true }) => {
   return (
     <div
       style={{
@@ -19,7 +20,8 @@ const InputForm: React.FC<{
       }}
       className="flexCol"
     >
-      <label htmlFor="">{label}</label>
+      {labelOn && <label htmlFor="">{label}</label>}
+
       <input
         style={{
           maxWidth: width ? width + "px" : "100%",
@@ -28,6 +30,7 @@ const InputForm: React.FC<{
         }}
         className="border-[1px] border-black outline-none w-full px-[10px]"
         type="text"
+        placeholder={label}
       />
     </div>
   );

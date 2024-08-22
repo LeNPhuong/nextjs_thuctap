@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import Btn from "./Btn";
-import FieldCart from "./FieldCart";
+import SumaryCart from "./SumaryCart";
 
 const BoxPay = () => {
   return (
@@ -17,13 +17,7 @@ const BoxPay = () => {
         <div className="mb-[15px]"></div>
         <Btn css="text-white text-14 font-lg font-v1 max-w-[133px] min-h-[49px] max-h-[49px]">ADD</Btn>
         <div className="mb-[33px]"></div>
-        <Title family="font-v1" fontSize="23" fontWeight={500} marginBottom="16">
-          Summary
-        </Title>
-        <div className="mb-[15px]"></div>
-        <FieldCart title="Price (4 items)" result="AED 128.60" />
-        <FieldCart title="Delivery Charge" result="AED 15.00" />
-        <FieldCart title="Total Price" result="AED 143.00" />
+        <SumaryCart />
         <div className="mb-[26px]"></div>
         <div className="flex flex-row justify-between">
           <Btn css="text-black bg-white border-[1px] text-14 font-lg border-[#000] font-v1 max-w-[133px] min-h-[49px] max-h-[49px]">

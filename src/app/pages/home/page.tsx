@@ -25,8 +25,7 @@ const page: NextPage<{}> = () => {
             ))}
             <BoxOverview />
           </ProductLayout>
-          <div className="mt-[55px]"></div>
-          <Title marginBottom="50" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+          <Title marginBottom="50" marginTop="55" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
             NEW ARRIVALS
           </Title>
           <ProductLayoutV2>
@@ -38,8 +37,7 @@ const page: NextPage<{}> = () => {
           </ProductLayoutV2>
           <Banner content1="50% OFF" content2="On All Items" img="" />
 
-          <div className="mt-[55px]"></div>
-          <Title marginBottom="50" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+          <Title marginBottom="50" marginTop="55" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
             TOP SELLERS
           </Title>
           <ProductLayoutV2>
@@ -53,8 +51,7 @@ const page: NextPage<{}> = () => {
         </ContentLayout>
       </BodyContainer>
       <BodyContainer color="#fff">
-        <div className="mt-[55px]"></div>
-        <Title marginBottom="50" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+        <Title marginBottom="50" marginTop="55" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
           AMBASSADORS
         </Title>
         <ProductLayoutV2>

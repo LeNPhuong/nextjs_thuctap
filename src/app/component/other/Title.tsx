@@ -3,15 +3,16 @@ import BtnMore from "./BtnMore";
 
 const Title: React.FC<{
   children: ReactNode;
-  family: String;
+  family: string;
+  color?: string;
   linkRef?: string;
-  fontSize?: String;
+  fontSize?: string;
   fontWeight?: number;
-  marginTop?: String;
-  marginRight?: String;
-  marginBottom?: String;
-  marginLeft?: String;
-}> = ({ children, linkRef, fontSize, fontWeight, family, marginTop, marginRight, marginBottom, marginLeft }) => {
+  marginTop?: string;
+  marginRight?: string;
+  marginBottom?: string;
+  marginLeft?: string;
+}> = ({ children, linkRef, fontSize, fontWeight, family, marginTop, marginRight, marginBottom, marginLeft, color }) => {
   return (
     <div
       style={{
@@ -26,6 +27,7 @@ const Title: React.FC<{
         style={{
           fontSize: fontSize + "px",
           fontWeight: fontWeight,
+          color: color,
         }}
         className={`${family}`}
       >
