@@ -20,7 +20,7 @@ const InputForm: React.FC<{
       }}
       className="flexCol"
     >
-      {labelOn && <label htmlFor="">{label}</label>}
+      {labelOn && <label className="text-14 font-md" htmlFor="">{label}</label>}
 
       <input
         style={{

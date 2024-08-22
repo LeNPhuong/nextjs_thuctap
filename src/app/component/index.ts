@@ -17,7 +17,6 @@ export { default as Pagination } from "./other/Pagination";
 export { default as LabelCard } from "./other/LabelCard";
 export { default as Breadcrumb } from "./other/Breadcrumb";
 export { default as ItemCart } from "./other/ItemCart";
-export { default as Space } from "./other/Space";
 export { default as InputForm } from "./other/InputForm";
 export { default as SumaryCart } from "./other/SumaryCart";
 export { default as Price } from "./other/Price";

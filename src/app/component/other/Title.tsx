@@ -12,7 +12,20 @@ const Title: React.FC<{
   marginRight?: string;
   marginBottom?: string;
   marginLeft?: string;
-}> = ({ children, linkRef, fontSize, fontWeight, family, marginTop, marginRight, marginBottom, marginLeft, color }) => {
+  center?: boolean;
+}> = ({
+  children,
+  linkRef,
+  fontSize,
+  fontWeight,
+  family,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+  color,
+  center,
+}) => {
   return (
     <div
       style={{
