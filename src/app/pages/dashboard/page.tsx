@@ -11,7 +11,7 @@ import Analytics from "./Analytics";
 const page: NextPage<{}> = ({}) => {
   const [view, setView] = useState<number>(dashboardData.REVIEWED);
 
-  return (
+  return ( 
     <>
       <BodyContainer>
         <Breadcrumb />
