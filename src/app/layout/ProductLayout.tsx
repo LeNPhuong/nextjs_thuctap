@@ -2,12 +2,12 @@
 
 import React, { ReactNode } from "react";
 
-const ProductLayout: React.FC<{ children: ReactNode; bg?: string; top?: string; bottom?: string }> = ({
-  children,
-  bg,
-  top,
-  bottom,
-}) => {
+const ProductLayout: React.FC<{
+  children: ReactNode;
+  bg?: string;
+  top?: string;
+  bottom?: string;
+}> = ({ children, bg, top, bottom }) => {
   return (
     <div
       style={{

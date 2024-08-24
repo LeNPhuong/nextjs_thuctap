@@ -1,6 +1,14 @@
 "use client";
 
-import { Ambassadors, BoxOverview, Card, ContainerItems, Slidebar, Title, Banner } from "@/app/component";
+import {
+  Ambassadors,
+  BoxOverview,
+  Card,
+  ContainerItems,
+  Slidebar,
+  Title,
+  Banner,
+} from "@/app/component";
 import BodyContainer from "@/app/layout/BodyContainer";
 import ContentLayout from "@/app/layout/ContentLayout";
 import ProductLayout from "@/app/layout/ProductLayout";
@@ -15,7 +23,13 @@ const page: NextPage<{}> = () => {
       <Slidebar />
       <BodyContainer color="rgba(247, 247, 247, 1)">
         <ContentLayout>
-          <Title marginBottom="50" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+          <Title
+            marginBottom="50"
+            linkRef="#"
+            family="font-v2"
+            fontWeight={500}
+            fontSize="28"
+          >
             NEW ARRIVALS
           </Title>
           <ProductLayout>
@@ -25,7 +39,14 @@ const page: NextPage<{}> = () => {
             ))}
             <BoxOverview />
           </ProductLayout>
-          <Title marginBottom="50" marginTop="55" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+          <Title
+            marginBottom="50"
+            marginTop="55"
+            linkRef="#"
+            family="font-v2"
+            fontWeight={500}
+            fontSize="28"
+          >
             NEW ARRIVALS
           </Title>
           <ProductLayoutV2>
@@ -37,7 +58,14 @@ const page: NextPage<{}> = () => {
           </ProductLayoutV2>
           <Banner content1="50% OFF" content2="On All Items" img="" />
 
-          <Title marginBottom="50" marginTop="55" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+          <Title
+            marginBottom="50"
+            marginTop="55"
+            linkRef="#"
+            family="font-v2"
+            fontWeight={500}
+            fontSize="28"
+          >
             TOP SELLERS
           </Title>
           <ProductLayoutV2>
@@ -51,13 +79,25 @@ const page: NextPage<{}> = () => {
         </ContentLayout>
       </BodyContainer>
       <BodyContainer color="#fff">
-        <Title marginBottom="50" marginTop="55" linkRef="#" family="font-v2" fontWeight={500} fontSize="28">
+        <Title
+          marginBottom="50"
+          marginTop="55"
+          linkRef="#"
+          family="font-v2"
+          fontWeight={500}
+          fontSize="28"
+        >
           AMBASSADORS
         </Title>
         <ProductLayoutV2>
           {Array.from({ length: 8 }, (_, e) => (
             <ContainerItems key={e}>
-              <Ambassadors des={false} onBtn={true} width="262px" center={true} />
+              <Ambassadors
+                des={false}
+                onBtn={true}
+                width="262px"
+                center={true}
+              />
             </ContainerItems>
           ))}
         </ProductLayoutV2>

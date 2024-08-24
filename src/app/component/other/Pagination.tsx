@@ -13,7 +13,10 @@ const Pagination: React.FC<{
     <div className="py-[40px]">
       <div className="flex flex-row">
         {Array.from({ length: lengthPage }, (_, e) => (
-          <button key={e} className="w-[33px] h-[33px] border-[1px] border-black text-14 text-center mr-[10px]">
+          <button
+            key={e}
+            className="w-[33px] h-[33px] border-[1px] border-black text-14 text-center mr-[10px]"
+          >
             {e + 1}
           </button>
         ))}

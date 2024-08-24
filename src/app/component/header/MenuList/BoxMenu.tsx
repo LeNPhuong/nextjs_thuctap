@@ -14,7 +14,9 @@ const BoxMenu: React.FC<{}> = () => {
             ))}
           </ul>
         </div>
-        <Btn css="max-w-[156px] max-h-[55px] text-14 min-h-[55px] uppercase text-white">sell with us</Btn>
+        <Btn css="max-w-[156px] max-h-[55px] text-14 min-h-[55px] uppercase text-white">
+          sell with us
+        </Btn>
       </div>
     </div>
   );

@@ -4,7 +4,12 @@ import LabelCard from "./LabelCard";
 import UserCard from "./UserCard";
 import Price from "./Price";
 
-const Card: React.FC<{ tag: string; center: boolean; width: string }> = ({ tag, center, width }) => {
+const Card: React.FC<{
+  tag: string;
+  center: boolean;
+  width: string;
+  bgColor?: string;
+}> = ({ tag, center, width, bgColor }) => {
   return (
     <BoxItem center={center} width={width}>
       <div className="min-h-[250px] w-full bg-rgb-custome-5 relative z-[10]">
@@ -18,8 +23,15 @@ const Card: React.FC<{ tag: string; center: boolean; width: string }> = ({ tag, 
         </div>
         <UserCard />
       </div>
-      <div className="p-[10px_10px_0_10px] min-h-[97px] max-h-[97px] h-full z-[10] relative">
-        <h1 className="text-18 font-v1 font-lg mb-[3px]">Product Title Goes Here</h1>
+      <div
+        style={{
+          background: bgColor ? bgColor : "none",
+        }}
+        className="p-[10px_10px_0_10px] min-h-[97px] max-h-[97px] h-full z-[10] relative"
+      >
+        <h1 className="text-18 font-v1 font-lg mb-[3px]">
+          Product Title Goes Here
+        </h1>
         <h2 className="text-12 font-v1 font-md uppercase mb-[8px]">BRAND</h2>
         <div className="flexRowV3 font-v1 pb-[20px]">
           <Price />

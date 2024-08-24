@@ -15,7 +15,11 @@ const ItemList: React.FC<{ data: menuIF }> = ({ data }) => {
       {data.menuSub && (
         <div className="absolute shadow-custome2 w-[232px] top-[40px] bg-[#fff] p-[18px_0_5px_20px] group-hover/list:flex flex-col gap-[15px] hidden z-[1000]">
           {data.menuSub.map((e, index) => (
-            <Link key={index} className="border-b-[1px] border-b-rgb-custome-5 pb-[10px]" href="">
+            <Link
+              key={index}
+              className="border-b-[1px] border-b-rgb-custome-5 pb-[10px]"
+              href=""
+            >
               {e.name}
             </Link>
           ))}

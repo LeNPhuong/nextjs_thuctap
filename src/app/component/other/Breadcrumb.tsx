@@ -20,9 +20,16 @@ const Breadcrumb = () => {
           (e: string, index: number) =>
             e.length !== 0 &&
             e !== "pages" && (
-              <p key={index} className="capitalize text-12 font-v1 flex flex-row items-center mr-[15px]">
+              <p
+                key={index}
+                className="capitalize text-12 font-v1 flex flex-row items-center mr-[15px]"
+              >
                 <span className="mr-[15px]">{e}</span>
-                {e === pathname.split("/")[pathname.split("/").length - 1] ? "" : <FaAngleRight />}
+                {e === pathname.split("/")[pathname.split("/").length - 1] ? (
+                  ""
+                ) : (
+                  <FaAngleRight />
+                )}
               </p>
             ),
         )}

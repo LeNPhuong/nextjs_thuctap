@@ -2,7 +2,10 @@
 
 import { ReactNode, FC } from "react";
 
-const BodyContainer: FC<{ children: ReactNode; color?: string }> = ({ children, color }) => {
+const BodyContainer: FC<{ children: ReactNode; color?: string }> = ({
+  children,
+  color,
+}) => {
   return (
     <div
       style={{

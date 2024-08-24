@@ -8,9 +8,21 @@ const InputForm: React.FC<{
   mb?: number;
   width?: number;
   height: number;
-  gap: number;
-  fsz: number;
-}> = ({ initdata, set, label, mb, width, height, gap, fsz, labelOn = true }) => {
+  gap?: number;
+  fsz?: number;
+  placeHolder?: string;
+}> = ({
+  initdata,
+  set,
+  label,
+  mb,
+  width,
+  height,
+  gap,
+  fsz,
+  placeHolder = label,
+  labelOn = true,
+}) => {
   return (
     <div
       style={{
@@ -20,7 +32,11 @@ const InputForm: React.FC<{
       }}
       className="flexCol"
     >
-      {labelOn && <label className="text-14 font-md" htmlFor="">{label}</label>}
+      {labelOn && (
+        <label className="text-14 font-md" htmlFor="">
+          {label}
+        </label>
+      )}
 
       <input
         style={{
@@ -30,7 +46,7 @@ const InputForm: React.FC<{
         }}
         className="border-[1px] border-black outline-none w-full px-[10px]"
         type="text"
-        placeholder={label}
+        placeholder={placeHolder}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import React, { ReactNode } from "react";
 
-const layout: NextPage<{ children: ReactNode }> = ({ children }) => {
+const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return <>{children}</>;
 };
 

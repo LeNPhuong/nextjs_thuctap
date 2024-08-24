@@ -8,7 +8,9 @@ const UploadImage = () => {
   }
   return (
     <>
-      <p className="uppercase text-18 font-lg text-center mb-[12px]">Profile Picture</p>
+      <p className="uppercase text-18 font-lg text-center mb-[12px]">
+        Profile Picture
+      </p>
       <div
         onClick={handleFile}
         className="w-full max-w-[153px] max-h-[153px] min-h-[153px] border-[1px] border-[#000] mx-auto cursor-pointer"

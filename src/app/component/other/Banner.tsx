@@ -1,7 +1,11 @@
 import React from "react";
 import Btn from "./Btn";
 
-const Banner: React.FC<{ content1: String; content2: String; img: string }> = ({ content1, content2, img }) => {
+const Banner: React.FC<{ content1: String; content2: String; img: string }> = ({
+  content1,
+  content2,
+  img,
+}) => {
   return (
     <div className="mt-[50px] w-full bg-rgb-custome-5 h-[177px] min-h-[177px] max-h-[177px] relative">
       <img src={img} className="object-cover h-full w-full" alt="" />

@@ -1,11 +1,11 @@
 import React from "react";
 
-const BoxItem: React.FC<{ children: React.ReactNode; center: boolean; width: string; bg?: string }> = ({
-  children,
-  center,
-  width,
-  bg,
-}) => {
+const BoxItem: React.FC<{
+  children: React.ReactNode;
+  center: boolean;
+  width: string;
+  bg?: string;
+}> = ({ children, center, width, bg }) => {
   return (
     <div
       style={{

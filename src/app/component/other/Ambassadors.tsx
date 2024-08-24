@@ -4,12 +4,12 @@ import Title from "./Title";
 import Btn from "./Btn";
 import { FaFacebookSquare, FaTwitterSquare, FaYoutube } from "react-icons/fa";
 
-const Ambassadors: React.FC<{ center: boolean; width: string; onBtn: boolean; des: boolean }> = ({
-  center,
-  width,
-  onBtn,
-  des,
-}) => {
+const Ambassadors: React.FC<{
+  center: boolean;
+  width: string;
+  onBtn: boolean;
+  des: boolean;
+}> = ({ center, width, onBtn, des }) => {
   return (
     <BoxItem center={center} width={width}>
       <div className="flexRowV2 bg-white shadow-custome3 my-[8px]">
@@ -39,8 +39,9 @@ const Ambassadors: React.FC<{ center: boolean; width: string; onBtn: boolean; de
           )}
           {des && (
             <p className="pt-[70px] font-v1 font-md text-[14px] bg-white text-center">
-              Enim expedita torquent! Animi sunt beatae laoreet nec. Euismod rutrum pariatur! Nunc dolorum nisl eum quos
-              quisquam ea. Nobis Perspiciatis
+              Enim expedita torquent! Animi sunt beatae laoreet nec. Euismod
+              rutrum pariatur! Nunc dolorum nisl eum quos quisquam ea. Nobis
+              Perspiciatis
             </p>
           )}
         </div>

@@ -22,6 +22,7 @@ const config: Config = {
         "rgb-custome-11": "rgba(219, 219, 219, 1)",
         "rgb-custome-12": "rgba(237, 237, 237, 1)",
         "rgb-custome-13": "rgba(78, 78, 78, 1)",
+        "rgb-custome-14": "rgba(247, 247, 247, 1)",
       },
       boxShadow: {
         custome1: "0 0 3px 6px rgba(0, 0, 0, 0.1)",
