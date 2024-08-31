@@ -13,11 +13,24 @@ import BodyContainer from "@/app/layout/BodyContainer";
 import ContentLayout from "@/app/layout/ContentLayout";
 import ProductLayout from "@/app/layout/ProductLayout";
 import ProductLayoutV2 from "@/app/layout/ProductLayoutV2";
+import { getProduct } from "@/app/service/productApi";
 
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const page: NextPage<{}> = () => {
+  const [product, setProduct] = useState(null);
+  useEffect(() => {
+    (async function () {
+      const data = await getProduct();
+      return setProduct(data.data);
+    })();
+  }, []);
+  if (!product) {
+    return null;
+  }
+  console.log(product);
+
   return (
     <>
       <Slidebar />

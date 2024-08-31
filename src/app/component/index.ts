@@ -20,3 +20,4 @@ export { default as ItemCart } from "./other/ItemCart";
 export { default as InputForm } from "./other/InputForm";
 export { default as SumaryCart } from "./other/SumaryCart";
 export { default as Price } from "./other/Price";
+export { default as Spiner } from "./other/Spiner";

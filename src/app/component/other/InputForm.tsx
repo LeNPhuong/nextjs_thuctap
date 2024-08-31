@@ -1,8 +1,8 @@
 import React, { SetStateAction } from "react";
 
 const InputForm: React.FC<{
-  initdata?: string | number;
-  set?: React.Dispatch<SetStateAction<string | number>>;
+  initdata: string | number;
+  set: React.Dispatch<SetStateAction<string>>;
   labelOn?: boolean;
   label?: string;
   mb?: number;
@@ -11,6 +11,7 @@ const InputForm: React.FC<{
   gap?: number;
   fsz?: number;
   placeHolder?: string;
+  type?: string;
 }> = ({
   initdata,
   set,
@@ -22,6 +23,7 @@ const InputForm: React.FC<{
   fsz,
   placeHolder = label,
   labelOn = true,
+  type = "text",
 }) => {
   return (
     <div
@@ -45,8 +47,10 @@ const InputForm: React.FC<{
           maxHeight: height ? height + "px" : "100%",
         }}
         className="border-[1px] border-black outline-none w-full px-[10px]"
-        type="text"
+        type={type}
         placeholder={placeHolder}
+        value={initdata}
+        onChange={(e) => set(e.target.value)}
       />
     </div>
   );

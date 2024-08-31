@@ -1,7 +1,7 @@
 import { Btn, Card, Title } from "@/app/component";
 import React from "react";
 
-const Review = () => {
+const Review: React.FC<{}> = ({}) => {
   return (
     <>
       <Title family="font-v1" fontSize="25" fontWeight={400} marginBottom="12">

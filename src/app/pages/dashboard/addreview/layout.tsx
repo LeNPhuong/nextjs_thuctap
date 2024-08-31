@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import React, { ReactNode } from "react";
 
 const layout: React.FC<{ children: ReactNode }> = ({ children }) => {

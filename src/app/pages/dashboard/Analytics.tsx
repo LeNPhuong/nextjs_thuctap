@@ -2,10 +2,10 @@ import { Title } from "@/app/component";
 import { LineChart } from "@mui/x-charts";
 import React from "react";
 
-const Analytics = () => {
+const Analytics: React.FC<{}> = ({}) => {
   return (
     <div className="w-full self-start px-[60px] mt-[30px]">
-      <div className="flexRow mb-[60px]">
+      <div className="flexRow w-full justify-between mb-[60px]">
         <div className="flexCol w-full max-w-[427px]">
           <Title family="font-v1" fontSize="37" fontWeight={400}>
             4565 Visitors

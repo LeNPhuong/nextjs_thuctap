@@ -1,11 +1,16 @@
 import { Title } from "@/app/component";
 import React from "react";
 
-const Select = () => {
+const Select: React.FC<{}> = ({}) => {
   return (
     <>
       <div className="mb-[40px]">
-        <Title family="font-v1" fontSize="14" fontWeight={400} marginBottom="10">
+        <Title
+          family="font-v1"
+          fontSize="14"
+          fontWeight={400}
+          marginBottom="10"
+        >
           Select Options
         </Title>
         <div className="flex flex-row flex-wrap gap-y-[20px]">

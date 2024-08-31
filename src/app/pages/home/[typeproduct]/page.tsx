@@ -1,15 +1,31 @@
 "use client";
 
-import { Card, Title } from "@/app/component";
+import { Card, Spiner, Title } from "@/app/component";
+import BoxItem from "@/app/component/other/BoxItem";
 import Breadcrumb from "@/app/component/other/Breadcrumb";
 import Pagination from "@/app/component/other/Pagination";
 import BodyContainer from "@/app/layout/BodyContainer";
 import ProductLayout from "@/app/layout/ProductLayout";
+import { getProduct } from "@/app/service/productApi";
 import { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const page: NextPage<{}> = () => {
   const [page, setPage] = useState<number>(0);
+  const [product, setProduct] = useState<any>(null);
+
+  useEffect(() => {
+    (async function () {
+      const rq = await getProduct();
+      setProduct(rq.data);
+    })();
+  }, []);
+
+  console.log(product);
+
+  if (!product) {
+    return <Spiner />;
+  }
 
   return (
     <>
@@ -20,8 +36,17 @@ const page: NextPage<{}> = () => {
         </Title>
         <div className="pb-[60px]"></div>
         <ProductLayout>
-          {Array.from({ length: 16 }, (_, e) => (
-            <Card width="262px" center={false} tag="makup" key={e} />
+          {product.map((data: any, e: any) => (
+            <BoxItem key={e} center={false} width="262px">
+              <Card
+                width="262px"
+                center={false}
+                tag="makup"
+                key={e}
+                data={data}
+                link={`/pages/home/makeup/${data.product_slug}`}
+              />
+            </BoxItem>
           ))}
         </ProductLayout>
         <Pagination page={page} setPage={setPage} lengthPage={4} />
