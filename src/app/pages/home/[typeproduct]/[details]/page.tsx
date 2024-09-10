@@ -1,7 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { Breadcrumb, Card, ContainerItems, Title } from "@/app/component";
+import React, { useEffect, useState } from "react";
+import {
+  Breadcrumb,
+  Card,
+  ContainerItems,
+  Spiner,
+  Title,
+} from "@/app/component";
 import { NextPage } from "next";
 import BodyContainer from "@/app/layout/BodyContainer";
 import ProductDetails from "./ProductDetails";
@@ -10,16 +16,33 @@ import Details from "./Details";
 import BoxReview from "./BoxReview";
 import ProductLayoutV2 from "@/app/layout/ProductLayoutV2";
 import Track from "./Track";
+import { getDetails } from "@/app/service/productApi";
+import { useParams, useSearchParams } from "next/navigation";
 
-const page: NextPage<{}> = ({}) => {
+const Page: NextPage<{}> = ({}) => {
+  const params = useParams<{ details: string }>();
+  const [product, setProduct] = useState(null);
   const [track, setTrack] = useState<boolean>(false);
+
+  useEffect(() => {
+    (async function () {
+      const details = params.details;
+      const rq = await getDetails(details);
+      setProduct(rq.data);
+    })();
+  }, [params]);
+
+  if (!product) {
+    return <Spiner />;
+  }
+
   return (
     <div className="">
       {track && <Track setTrack={setTrack} />}
 
       <BodyContainer>
         <Breadcrumb />
-        <ProductDetails setTrack={setTrack} />
+        <ProductDetails setTrack={setTrack} product={product} />
         <div className="pb-[35px]"></div>
         <BoxAmbassador />
         <div className="pb-[35px]"></div>
@@ -47,4 +70,4 @@ const page: NextPage<{}> = ({}) => {
   );
 };
 
-export default page;
+export default Page;

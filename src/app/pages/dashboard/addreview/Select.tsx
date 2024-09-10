@@ -15,7 +15,7 @@ const Select: React.FC<{}> = ({}) => {
         </Title>
         <div className="flex flex-row flex-wrap gap-y-[20px]">
           {Array.from({ length: 15 }, (_, e) => (
-            <div className="w-full max-w-[20%]">
+            <div className="w-full max-w-[20%]" key={e}>
               <div className="w-full flex flex-row items-center"></div>
               <input type="checkbox" className="mr-[15px]" />
               <label htmlFor="" className="text-14 font-md">

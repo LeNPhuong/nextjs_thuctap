@@ -2,6 +2,7 @@ import React from "react";
 import Title from "./Title";
 import Btn from "./Btn";
 import SumaryCart from "./SumaryCart";
+import Link from "next/link";
 
 const BoxPay = () => {
   return (
@@ -31,7 +32,7 @@ const BoxPay = () => {
             CONTINUE SHOPPING
           </Btn>
           <Btn css="text-white text-14 font-lg font-v1 max-w-[133px] min-h-[49px] max-h-[49px]">
-            PLACE ORDER
+            <Link href="/pages/checkout">PLACE ORDER</Link>
           </Btn>
         </div>
       </div>

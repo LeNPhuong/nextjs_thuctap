@@ -12,7 +12,7 @@ const BoxAmbassador = () => {
       <div className="mb-[15px]"></div>
       <div className="flexRow justify-between">
         {Array.from({ length: 2 }, (_, e) => (
-          <AmbassadorSay />
+          <AmbassadorSay key={e} />
         ))}
       </div>
     </ContentLayoutV2>

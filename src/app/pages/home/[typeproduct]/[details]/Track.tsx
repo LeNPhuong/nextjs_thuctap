@@ -2,11 +2,12 @@
 
 import { Btn, InputForm, Price, Title } from "@/app/component";
 import { IoMdClose } from "react-icons/io";
-import React, { SetStateAction } from "react";
+import React, { SetStateAction, useState } from "react";
 
 const Track: React.FC<{
   setTrack: React.Dispatch<SetStateAction<boolean>>;
 }> = ({ setTrack }) => {
+  const [demo, setDemo] = useState<string>("");
   return (
     <div className="fixed top-0 right-0 bottom-0 left-0 z-[9999] bg-[#0000008e] font-v1">
       <div className="bg-[#fff] max-w-[479px] mx-auto mt-[190px] p-[40px] relative">
@@ -34,12 +35,16 @@ const Track: React.FC<{
             height={50}
             width={169}
             placeHolder="Enter Desired price here"
+            initdata={demo}
+            set={setDemo}
           />
           <div className="mb-[25px]"></div>
           <InputForm
             label="Email Address"
             height={50}
             placeHolder="Enter Desired price here"
+            initdata={demo}
+            set={setDemo}
           />
           <div className="mb-[25px]"></div>
           <p className="text-[#000] text-[14px] mb-[45px]">

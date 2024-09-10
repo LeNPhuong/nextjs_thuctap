@@ -4,6 +4,7 @@ import LabelCard from "./LabelCard";
 import UserCard from "./UserCard";
 import Price from "./Price";
 import Link from "next/link";
+import Image from "next/image";
 
 const Card: React.FC<{
   tag: string;
@@ -17,13 +18,16 @@ const Card: React.FC<{
     <BoxItem center={center} width={width}>
       <Link href={`${link || ""}`}>
         <div className="min-h-[250px] w-full bg-rgb-custome-5 relative z-[10]">
-          <img
+          <Image
             src={
               data?.product_gallery[0] ||
               "https://is5-ssl.mzstatic.com/image/thumb/Purple111/v4/d5/75/99/d5759986-1f79-9ee2-f092-86f7b74eeee4/source/512x512bb.jpg"
             }
-            className="w-full h-full object-cover"
-            alt=""
+            width={0}
+            height={0}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            sizes="100vw"
+            alt="Picture of the author"
           />
           <div className="absolute bottom-[15px] left-[15px] bg-[#000] w-full max-w-[64px] min-h-[24px] text-white text-center uppercase text-10 leading-[24px] font-v1">
             tag

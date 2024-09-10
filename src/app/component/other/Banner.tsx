@@ -1,5 +1,6 @@
 import React from "react";
 import Btn from "./Btn";
+import Image from "next/image";
 
 const Banner: React.FC<{ content1: String; content2: String; img: string }> = ({
   content1,
@@ -8,7 +9,14 @@ const Banner: React.FC<{ content1: String; content2: String; img: string }> = ({
 }) => {
   return (
     <div className="mt-[50px] w-full bg-rgb-custome-5 h-[177px] min-h-[177px] max-h-[177px] relative">
-      <img src={img} className="object-cover h-full w-full" alt="" />
+      <Image
+        src={img}
+        width={0}
+        height={0}
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        sizes="100vw"
+        alt="image"
+      />
       <div className="absolute right-[45px] top-[50%] translate-y-[-50%]">
         <div className="flexRowV2">
           <div className="flexCol mr-[73px]">

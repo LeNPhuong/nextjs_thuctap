@@ -5,6 +5,7 @@ import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 
 const ProductLayoutV2: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const elmList = Children.count(children);
   const elm = useRef<HTMLDivElement | null>(null);
   const [widthCrd, setWidthCrd] = useState<number>(0);
   const [line, setLine] = useState<number>(0);
@@ -13,7 +14,7 @@ const ProductLayoutV2: React.FC<{ children: ReactNode }> = ({ children }) => {
     setWidthCrd(
       (e) => (e = (elm?.current?.children[0] as HTMLDivElement).offsetWidth),
     );
-  }, [Children.count(children)]);
+  }, [elmList]);
 
   function handleNext(): void | null {
     const total =

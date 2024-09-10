@@ -1,11 +1,15 @@
+"use client";
+
 import { ItemCart, Title } from "@/app/component";
 import BoxPay from "@/app/component/other/BoxPay";
 import Breadcrumb from "@/app/component/other/Breadcrumb";
 import BodyContainer from "@/app/layout/BodyContainer";
+import { useAppSelector } from "@/app/redux/store";
 import { NextPage } from "next";
 import React from "react";
 
-const page: NextPage<{}> = () => {
+const Page: NextPage<{}> = () => {
+  const cart = useAppSelector((e) => e.cart.productList);
   return (
     <>
       <BodyContainer color="rgba(247, 247, 247, 1)">
@@ -15,10 +19,11 @@ const page: NextPage<{}> = () => {
         </Title>
         <div className="flex flex-row w-full justify-between mt-[45px]">
           <div className="w-full max-w-[766px] bg-white p-[30px] flex flex-col gap-[28px]">
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
+            {cart ? (
+              cart.map((e) => <ItemCart key={e.id} product={e} />)
+            ) : (
+              <h1 className="text-center">Giỏ hàng trống</h1>
+            )}
           </div>
           <BoxPay />
         </div>
@@ -28,4 +33,4 @@ const page: NextPage<{}> = () => {
   );
 };
 
-export default page;
+export default Page;

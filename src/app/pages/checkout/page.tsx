@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import Shipping from "./Shipping";
 import Billing from "./Billing";
 
-const page: NextPage<{}> = () => {
+const Page: NextPage<{}> = () => {
   const [range, setRange] = useState<number>(0);
   return (
     <>
@@ -37,10 +37,20 @@ const page: NextPage<{}> = () => {
             </div>
 
             <div className="w-full flexRowV3 mb-[25px]">
-              <Title family="font-v1" fontSize="22" fontWeight={500} color={range < 50 ? "" : "rgba(190, 190, 190, 1)"}>
+              <Title
+                family="font-v1"
+                fontSize="22"
+                fontWeight={500}
+                color={range < 50 ? "" : "rgba(190, 190, 190, 1)"}
+              >
                 Shipping Details
               </Title>
-              <Title family="font-v1" fontSize="22" fontWeight={500} color={range > 50 ? "" : "rgba(190, 190, 190, 1)"}>
+              <Title
+                family="font-v1"
+                fontSize="22"
+                fontWeight={500}
+                color={range > 50 ? "" : "rgba(190, 190, 190, 1)"}
+              >
                 Billing Details
               </Title>
             </div>
@@ -60,4 +70,4 @@ const page: NextPage<{}> = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -4,14 +4,15 @@ import { Breadcrumb, Btn, InputForm, Title } from "@/app/component";
 import BoxItem from "@/app/component/other/BoxItem";
 import BodyContainer from "@/app/layout/BodyContainer";
 import { NextPage } from "next";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Select from "./Select";
 
-const page: NextPage<{}> = () => {
+const Page: NextPage<{}> = () => {
   const inputFile = useRef<HTMLInputElement>(null);
   function handleFile() {
     inputFile?.current?.click();
   }
+  const [demo, setDemo] = useState<string>("");
   return (
     <>
       <BodyContainer>
@@ -41,6 +42,8 @@ const page: NextPage<{}> = () => {
                 height={45}
                 gap={5}
                 label="Select Brand"
+                initdata={demo}
+                set={setDemo}
               />
             </BoxItem>
             <BoxItem bg="none" width="50%" center={false}>
@@ -50,6 +53,8 @@ const page: NextPage<{}> = () => {
                 height={45}
                 gap={5}
                 label="Select Product"
+                initdata={demo}
+                set={setDemo}
               />
             </BoxItem>
           </div>
@@ -85,6 +90,8 @@ const page: NextPage<{}> = () => {
               height={45}
               gap={5}
               label="Video URL"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <div className="mb-[15px]"></div>
@@ -107,4 +114,4 @@ const page: NextPage<{}> = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -10,7 +10,7 @@ import { getProduct } from "@/app/service/productApi";
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 
-const page: NextPage<{}> = () => {
+const Page: NextPage<{}> = () => {
   const [page, setPage] = useState<number>(0);
   const [product, setProduct] = useState<any>(null);
 
@@ -20,8 +20,6 @@ const page: NextPage<{}> = () => {
       setProduct(rq.data);
     })();
   }, []);
-
-  console.log(product);
 
   if (!product) {
     return <Spiner />;
@@ -44,7 +42,7 @@ const page: NextPage<{}> = () => {
                 tag="makup"
                 key={e}
                 data={data}
-                link={`/pages/home/makeup/${data.product_slug}`}
+                link={`/pages/home/makeup/${data.id}`}
               />
             </BoxItem>
           ))}
@@ -55,4 +53,4 @@ const page: NextPage<{}> = () => {
   );
 };
 
-export default page;
+export default Page;

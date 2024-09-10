@@ -52,7 +52,10 @@ const Analytics: React.FC<{}> = ({}) => {
           <p className="pr-[55px] text-right">Amount</p>
         </div>
         {Array.from({ length: 9 }, (_, e) => (
-          <div className="grid grid-cols-[repeat(3,1fr)] py-[10px] text-18 font-md">
+          <div
+            className="grid grid-cols-[repeat(3,1fr)] py-[10px] text-18 font-md"
+            key={e}
+          >
             <p className="pl-[55px]">Product Name</p>
             <p className="text-center">3</p>
             <p className="pr-[55px] text-right">AED 159</p>

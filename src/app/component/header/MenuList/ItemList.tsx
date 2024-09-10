@@ -18,7 +18,7 @@ const ItemList: React.FC<{ data: menuIF }> = ({ data }) => {
             <Link
               key={index}
               className="border-b-[1px] border-b-rgb-custome-5 pb-[10px]"
-              href=""
+              href="/pages/home/none"
             >
               {e.name}
             </Link>

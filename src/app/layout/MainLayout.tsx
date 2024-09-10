@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { Footer, Header } from "../component";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";

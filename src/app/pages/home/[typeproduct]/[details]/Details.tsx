@@ -22,7 +22,7 @@ const Details = () => {
           </Title>
           <ul className="flex flex-col gap-[15px] mt-[20px]">
             {Array.from({ length: 4 }, (_, e) => (
-              <li className="flexRow items-center font-md text-14">
+              <li key={e} className="flexRow items-center font-md text-14">
                 <span className="min-w-[9px] max-w-[9px] min-h-[9px] max-h-[9px] border-[2px] border-[#000] rounded-full mr-[5px]"></span>
                 Ingredient - Eget cursus officiis, consequuntur adipitin cidunt
                 scinimano
@@ -36,7 +36,7 @@ const Details = () => {
           </Title>
           <ul className="flex flex-col gap-[15px] mt-[20px]">
             {Array.from({ length: 6 }, (_, e) => (
-              <li className="flexRow items-center font-md text-14">
+              <li key={e} className="flexRow items-center font-md text-14">
                 <span className="min-w-[9px] max-w-[9px] min-h-[9px] max-h-[9px] border-[2px] border-[#000] rounded-full mr-[5px]"></span>
                 Ingredient - Eget cursus officiis, consequuntur adipitin cidunt
                 scinimano
@@ -65,7 +65,6 @@ const Details = () => {
         Copolymer, Butyrospermum Parkii (Shea) Butter, Dimethicone,
       </p>
       <div className="pb-[28px]"></div>
-
     </ContentLayoutV2>
   );
 };

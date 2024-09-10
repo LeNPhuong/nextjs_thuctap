@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import Review from "./Review";
 import Analytics from "./Analytics";
 
-const page: NextPage<{}> = ({}) => {
+const Page: NextPage<{}> = ({}) => {
   const [view, setView] = useState<number>(dashboardData.REVIEWED);
 
   return ( 
@@ -76,4 +76,4 @@ const page: NextPage<{}> = ({}) => {
   );
 };
 
-export default page;
+export default Page;

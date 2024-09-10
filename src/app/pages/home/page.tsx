@@ -18,7 +18,7 @@ import { getProduct } from "@/app/service/productApi";
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 
-const page: NextPage<{}> = () => {
+const Page: NextPage<{}> = () => {
   const [product, setProduct] = useState(null);
   useEffect(() => {
     (async function () {
@@ -29,7 +29,6 @@ const page: NextPage<{}> = () => {
   if (!product) {
     return null;
   }
-  console.log(product);
 
   return (
     <>
@@ -120,4 +119,4 @@ const page: NextPage<{}> = () => {
   );
 };
 
-export default page;
+export default Page;

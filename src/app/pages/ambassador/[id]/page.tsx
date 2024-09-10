@@ -1,9 +1,10 @@
 import { Ambassadors, Card, Slidebar } from "@/app/component";
 import BodyContainer from "@/app/layout/BodyContainer";
 import ProductLayout from "@/app/layout/ProductLayout";
+import { NextPage } from "next";
 import React from "react";
 
-const page = () => {
+const Page: NextPage<{}> = () => {
   return (
     <>
       <BodyContainer>
@@ -24,4 +25,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

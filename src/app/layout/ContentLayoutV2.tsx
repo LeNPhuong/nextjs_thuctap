@@ -1,3 +1,5 @@
+"use client"
+
 import React, { ReactNode } from "react";
 
 const ContentLayoutV2: React.FC<{ children: ReactNode; width?: string }> = ({

@@ -1,11 +1,12 @@
 import { Btn, InputForm, Title } from "@/app/component";
 import BoxItem from "@/app/component/other/BoxItem";
-import React, { SetStateAction } from "react";
+import React, { SetStateAction, useState } from "react";
 
-const Shipping: React.FC<{ range: number; setRange: React.Dispatch<SetStateAction<number>> }> = ({
-  range,
-  setRange,
-}) => {
+const Shipping: React.FC<{
+  range: number;
+  setRange: React.Dispatch<SetStateAction<number>>;
+}> = ({ range, setRange }) => {
+  const [demo, setDemo] = useState<string>("");
   return (
     <div className="w-full font-v1">
       <div className="w-full">
@@ -24,22 +25,70 @@ const Shipping: React.FC<{ range: number; setRange: React.Dispatch<SetStateActio
         <div className="pb-[15px]"></div>
         <div className="w-full flex flex-row flex-wrap gap-y-[22px]">
           <BoxItem bg="none" width="50%" center={false}>
-            <InputForm fsz={14} width={308} height={45} gap={5} label="First Name" />
+            <InputForm
+              fsz={14}
+              width={308}
+              height={45}
+              gap={5}
+              label="First Name"
+              initdata={demo}
+              set={setDemo}
+            />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
-            <InputForm fsz={14} width={308} height={45} gap={5} label="Last Name" />
+            <InputForm
+              fsz={14}
+              width={308}
+              height={45}
+              gap={5}
+              label="Last Name"
+              initdata={demo}
+              set={setDemo}
+            />
           </BoxItem>{" "}
           <BoxItem bg="none" width="50%" center={false}>
-            <InputForm fsz={14} width={308} height={45} gap={5} label="Street Address" />
+            <InputForm
+              fsz={14}
+              width={308}
+              height={45}
+              gap={5}
+              label="Street Address"
+              initdata={demo}
+              set={setDemo}
+            />
           </BoxItem>{" "}
           <BoxItem bg="none" width="50%" center={false}>
-            <InputForm fsz={14} width={308} height={45} gap={5} label="Area" />
+            <InputForm
+              fsz={14}
+              width={308}
+              height={45}
+              gap={5}
+              label="Area"
+              initdata={demo}
+              set={setDemo}
+            />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
-            <InputForm fsz={14} width={308} height={45} gap={5} label="City" />
+            <InputForm
+              fsz={14}
+              width={308}
+              height={45}
+              gap={5}
+              label="City"
+              initdata={demo}
+              set={setDemo}
+            />
           </BoxItem>{" "}
           <BoxItem bg="none" width="50%" center={false}>
-            <InputForm fsz={14} width={308} height={45} gap={5} label="Phone Number" />
+            <InputForm
+              fsz={14}
+              width={308}
+              height={45}
+              gap={5}
+              label="Phone Number"
+              initdata={demo}
+              set={setDemo}
+            />
           </BoxItem>
         </div>
         <div className="pb-[15px]"></div>
@@ -48,8 +97,8 @@ const Shipping: React.FC<{ range: number; setRange: React.Dispatch<SetStateActio
         </Title>
         <textarea className="w-full max-w-[308px] outline-none border-[1px] border-[#000] min-h-[135px] max-h-[135px]" />
         <p className="text-14 mt-[15px]">
-          Molestias fringilla aliquam curae, taciti, vestibulum potenti sapien, tellus voluptatibus aliquid sapien. Nisi
-          su aliquid sapien
+          Molestias fringilla aliquam curae, taciti, vestibulum potenti sapien,
+          tellus voluptatibus aliquid sapien. Nisi su aliquid sapien
         </p>
         <Btn
           event={() => setRange(100)}

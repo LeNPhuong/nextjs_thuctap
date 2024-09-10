@@ -1,10 +1,12 @@
 import { Btn, InputForm, Title } from "@/app/component";
-import React from "react";
+import React, { useState } from "react";
 import UploadImage from "./UploadImage";
 import BoxItem from "@/app/component/other/BoxItem";
 import BoxGender from "./BoxGender";
 
 const AmbassadorPage = () => {
+  const [demo, setDemo] = useState<string>("");
+
   return (
     <>
       <div className="pb-[35px]"></div>
@@ -40,6 +42,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="First Name *"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -49,6 +53,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Last Name *"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -58,6 +64,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Display Name"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxGender />
@@ -68,6 +76,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Email Address"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -77,6 +87,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Mobile Number"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -86,6 +98,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Instagram"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -95,6 +109,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Youtube"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -104,6 +120,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Set Password"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
           <BoxItem bg="none" width="50%" center={false}>
@@ -113,6 +131,8 @@ const AmbassadorPage = () => {
               height={45}
               gap={5}
               label="Repeat Password"
+              initdata={demo}
+              set={setDemo}
             />
           </BoxItem>
         </div>
